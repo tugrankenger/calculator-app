@@ -18,6 +18,45 @@
     --color-text-key-base:hsl(221, 14%, 31%);
     --color-text-key-state-1: (0, 0, 100%);
 
+    /* theme2 */
+    //bg-colors-theme2
+    --color-main-background-t2: hsl(0, 0%, 90%);
+    --color-keypad-background-t2: hsl(0, 5%, 81%);
+    --color-screen-background-t2: hsl(0, 0%, 93%);
+
+    //keys-colors-theme2
+    --color-fill-key-state-1-t2:hsl(185, 42%, 37%);
+    --color-shadow-key-state-1-t2: hsl(185, 58%, 25%);
+
+    --color-fill-state-2-t2: hsl(25, 98%, 40%);
+    --color-shadow-key-state-2-t2: hsl(25, 99%, 27%);
+
+    --color-fill-key-base-t2: hsl(45, 7%, 89%);
+    --color-shadow-key-base-t2: hsl(35, 11%, 61%);
+
+    --color-text-key-base-t2:hsl(60, 10%, 19%);
+    --color-text-key-state-1-t2: hsl(0, 0, 100%);
+
+    /* theme3 */
+    //bg-colors-theme3
+    --color-main-background-t3: hsl(268, 75%, 9%);
+    --color-keypad-background-t3: hsl(268, 71%, 12%);
+    --color-screen-background-t3: hsl(268, 71%, 12%);
+
+    //keys-colors-theme3
+    --color-fill-key-state-1-t3:hsl(281, 89%, 26%);
+    --color-shadow-key-state-1-t3: hsl(285, 91%, 52%);
+
+    --color-fill-state-2-t3: hsl(176, 100%, 44%);
+    --color-shadow-key-state-2-t3: hsl(177, 92%, 70%);
+
+    --color-fill-key-base-t3: hsl(268, 47%, 21%);
+    --color-shadow-key-base-t3: hsl(290, 70%, 36%);
+
+    --color-text-key-base-t3:hsl(52, 100%, 62%);
+    --color-text-key-state-1-t3: hsl(198, 20%, 13%);
+    --color-text-screen-t3:hsl(52, 100%, 62%);
+
     // google-fonts-spartan
     --font-family: 'Spartan',sans-serif;
 }
@@ -25,4 +64,6 @@
 
 
 @import "theme1";
-@import "normalize"
+@import "theme2";
+@import "theme3";
+@import "normalize";
