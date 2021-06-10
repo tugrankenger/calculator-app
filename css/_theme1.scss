@@ -1,0 +1,120 @@
+@mixin ortak {
+            font-family: var(--font-family);
+            width: 64px;
+            height: 48px;
+            padding-top: 6px;
+            border-radius: 5px;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            text-align: center;
+            cursor: pointer;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+}
+.bg_1{
+    background-color: var(--color-main-background);
+    font-size: 32px;
+
+    .bg_keypad{
+        background-color: var(--color-keypad-background);
+        width: 320px;
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 10px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+
+        &__bg_keybase{
+            background-color: var(--color-fill-key-base);
+            color: var(--color-text-key-base);
+            box-shadow: 0px 4px var(--color-shadow-key-base);
+            @include ortak
+        }
+
+        &__del{
+            background-color: var(--color-fill-key-state-1);
+            color: #fff;
+            box-shadow: 0px 4px var(--color-shadow-key-state-1);
+            @include ortak  
+        }
+        &__reset{
+            background-color: var(--color-fill-key-state-1);
+            color: #fff;
+            box-shadow: 0px 4px var(--color-shadow-key-state-1);
+            
+            @include ortak;
+            width: 140px;
+        }
+        &__equal{
+            background-color: var(--color-fill-state-2);
+            color: #fff;
+            box-shadow: 0px 4px var(--color-shadow-key-state-2);
+            
+            @include ortak;
+            width: 136px;
+        }
+    
+    }
+
+    .screen{
+        width: 320px;
+        height: 80px;
+        border-radius: 10px;
+        margin-bottom: 5px;
+        text-align: right;
+        padding-top: 24px;
+        color: #fff;
+        font-family: var(--font-family);
+        background-color: var(--color-screen-background);
+    }
+
+    .head{
+        margin-top: 20px;
+        width: 320px;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+
+        h1{
+            font-family: var(--font-family);
+            font-size: 20px;
+            margin-left: -12px;
+            margin-bottom: 1px;
+        }
+
+        &__theme{
+            font-family: var(--font-family);
+            font-size: 10px;
+            margin-top: 10px;
+            margin-right: 5px;
+        }
+
+        &__theme-number{
+            display: flex;
+            justify-content: space-around;
+            font-size: 10px;
+        }
+        &__state{
+            width: 20px;
+            border-radius: 10px;
+            padding: 2px;
+            margin-bottom: 2px;
+            background-color: var(--color-keypad-background);
+            cursor: pointer;
+        }
+        &__state__pointer{
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            background-color: var(--color-fill-state-2);
+        }
+
+        &__display{
+            display: flex;
+        }
+    }
+}

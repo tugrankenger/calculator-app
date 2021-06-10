@@ -1,0 +1,203 @@
+:root {
+  --color-main-background: hsl(222, 26%, 31%);
+  --color-keypad-background: hsl(223, 31%, 20%);
+  --color-screen-background: hsl(224, 36%, 15%);
+  --color-fill-key-state-1:hsl(225, 21%, 49%);
+  --color-shadow-key-state-1: hsl(224, 28%, 35%);
+  --color-fill-state-2: hsl(6, 63%, 50%);
+  --color-shadow-key-state-2: hsl(6, 70%, 34%);
+  --color-fill-key-base: hsl(30, 25%, 89%);
+  --color-shadow-key-base: hsl(28, 16%, 65%);
+  --color-text-key-base:hsl(221, 14%, 31%);
+  --color-text-key-state-1: (0, 0, 100%);
+  --font-family: 'Spartan',sans-serif;
+}
+
+.bg_1 {
+  background-color: var(--color-main-background);
+  font-size: 32px;
+}
+
+.bg_1 .bg_keypad {
+  background-color: var(--color-keypad-background);
+  width: 320px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border-radius: 10px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.bg_1 .bg_keypad__bg_keybase {
+  background-color: var(--color-fill-key-base);
+  color: var(--color-text-key-base);
+  -webkit-box-shadow: 0px 4px var(--color-shadow-key-base);
+          box-shadow: 0px 4px var(--color-shadow-key-base);
+  font-family: var(--font-family);
+  width: 64px;
+  height: 48px;
+  padding-top: 6px;
+  border-radius: 5px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.bg_1 .bg_keypad__del {
+  background-color: var(--color-fill-key-state-1);
+  color: #fff;
+  -webkit-box-shadow: 0px 4px var(--color-shadow-key-state-1);
+          box-shadow: 0px 4px var(--color-shadow-key-state-1);
+  font-family: var(--font-family);
+  width: 64px;
+  height: 48px;
+  padding-top: 6px;
+  border-radius: 5px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.bg_1 .bg_keypad__reset {
+  background-color: var(--color-fill-key-state-1);
+  color: #fff;
+  -webkit-box-shadow: 0px 4px var(--color-shadow-key-state-1);
+          box-shadow: 0px 4px var(--color-shadow-key-state-1);
+  font-family: var(--font-family);
+  width: 64px;
+  height: 48px;
+  padding-top: 6px;
+  border-radius: 5px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  width: 140px;
+}
+
+.bg_1 .bg_keypad__equal {
+  background-color: var(--color-fill-state-2);
+  color: #fff;
+  -webkit-box-shadow: 0px 4px var(--color-shadow-key-state-2);
+          box-shadow: 0px 4px var(--color-shadow-key-state-2);
+  font-family: var(--font-family);
+  width: 64px;
+  height: 48px;
+  padding-top: 6px;
+  border-radius: 5px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  width: 136px;
+}
+
+.bg_1 .screen {
+  width: 320px;
+  height: 80px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  text-align: right;
+  padding-top: 24px;
+  color: #fff;
+  font-family: var(--font-family);
+  background-color: var(--color-screen-background);
+}
+
+.bg_1 .head {
+  margin-top: 20px;
+  width: 320px;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.bg_1 .head h1 {
+  font-family: var(--font-family);
+  font-size: 20px;
+  margin-left: -12px;
+  margin-bottom: 1px;
+}
+
+.bg_1 .head__theme {
+  font-family: var(--font-family);
+  font-size: 10px;
+  margin-top: 10px;
+  margin-right: 5px;
+}
+
+.bg_1 .head__theme-number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: 10px;
+}
+
+.bg_1 .head__state {
+  width: 20px;
+  border-radius: 10px;
+  padding: 2px;
+  margin-bottom: 2px;
+  background-color: var(--color-keypad-background);
+  cursor: pointer;
+}
+
+.bg_1 .head__state__pointer {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: var(--color-fill-state-2);
+}
+
+.bg_1 .head__display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+/*# sourceMappingURL=main.css.map */
