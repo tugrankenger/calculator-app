@@ -1,5 +1,3 @@
-//var variables = ['',''];
-//var operator = '';
 var optState = false;
 var opt='';
 var result = 0;
@@ -11,7 +9,6 @@ var btnReset = document.querySelector('.btnReset');
 var btnEqual = document.querySelector('.btnEqual');
 var btnDelete = document.querySelector('.btnDelete');
 var btnDot = document.querySelector('.btnDot');
-
 
 
 btnDigit.forEach(function(element){
@@ -33,37 +30,38 @@ btnOpt.forEach(function(element){
 
         optState = true;
         var newOptState = this.textContent
-        
-       
-        screen.textContent= " "+ screen.textContent + " " + newOptState;
 
         switch(opt){
             case "+": screen.textContent= (result + Number(screen.textContent));break;
             case "-": screen.textContent= (result - Number(screen.textContent));break;
-            case "*": screen.textContent= (result * Number(screen.textContent));break;
+            case "x": screen.textContent= (result * Number(screen.textContent));break;
             case "/": screen.textContent= (result / Number(screen.textContent));break;
             default: break;
         }
+        screen.textContent= " "+ screen.textContent + " " + newOptState;
         result= Number(screen.textContent);
         opt= newOptState;
     }
 });
 
+
 btnEqual.onclick= function(e){
+    screen.textContent="";
     optState=true;
 
     switch(opt){
         case "+": screen.textContent= (result + Number(screen.textContent));break;
         case "-": screen.textContent= (result - Number(screen.textContent));break;
-        case "*": screen.textContent= (result * Number(screen.textContent));break;
+        case "x": screen.textContent= (result * Number(screen.textContent));break;
         case "/": screen.textContent= (result / Number(screen.textContent));break;
         default: break;
     }
     result = Number(screen.textContent);
     screen.textContent=result;
-    result=0;
+    //result=0;
     opt="";
 }
+
 
 btnDot.onclick= function(e){
     if(!optState && !screen.textContent.includes(".")){
@@ -78,20 +76,23 @@ btnDot.onclick= function(e){
     optState = false;
 }
 
-
-
-
-
-/* 
-
 reset =()=>{
     operator ='';
+    screen.textContent ="0";
     result = 0;
-    updateScreen();
 }
 btnReset.addEventListener('click', reset);
 
-btnDelete.addEventListener('click',remove);
+back =()=> {
+    var value = screen.textContent.value;
+    if(value != null){
+        value = value.substr(0, value.length - 1);
+    }
+}
+
+btnDelete.addEventListener('click', back);
+
+/* 
 
 btnDigit.forEach(button =>{
     button.addEventListener('click',()=>{
